@@ -1,0 +1,9 @@
+<% @comics.in_groups_of(4, false).each do |group| %>
+  <div class="row">
+    <% group.each do |comic| %>
+      <div class="comic-wrapper col-md-3">
+        <%= comic_box(comic) %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

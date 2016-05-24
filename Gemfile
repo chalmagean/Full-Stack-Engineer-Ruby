@@ -41,4 +41,9 @@ group :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'vcr'
+  gem 'selenium-webdriver'
+  gem 'shoulda-matchers'
+  gem 'webmock'
+  gem 'poltergeist'
+  gem 'launchy'
 end

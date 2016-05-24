@@ -1,0 +1,17 @@
+.comic-wrapper {
+  padding: 20px 0;
+  text-align: center;
+  font-weight: bold;
+  color: $text-color;
+
+  &:hover {
+    background-color: rgba(255,255,255,0.6);
+  }
+}
+
+.comic-box {
+  height: 300px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
