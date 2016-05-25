@@ -3,10 +3,6 @@
   text-align: center;
   font-weight: bold;
   color: $text-color;
-
-  &:hover {
-    background-color: rgba(255,255,255,0.6);
-  }
 }
 
 .comic-box {
@@ -15,3 +11,10 @@
   background-repeat: no-repeat;
 }
 
+.comic-actions {
+  margin: 10px 0;
+}
+
+.comic-title {
+  padding: 0 10px;
+}
