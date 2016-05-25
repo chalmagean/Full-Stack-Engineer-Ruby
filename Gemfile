@@ -43,6 +43,7 @@ group :test do
   gem 'vcr'
   gem 'selenium-webdriver'
   gem 'shoulda-matchers'
+  gem 'database_cleaner'
   gem 'webmock'
   gem 'poltergeist'
   gem 'launchy'
