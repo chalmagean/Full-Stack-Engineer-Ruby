@@ -1,21 +1,11 @@
 class ComicsController < ApplicationController
   def index
-    @comics = marvel_client.comics
+    @comics = MarvelClient.comics(params)
     @votes = Vote.all.map(&:comic_id)
-  end
 
-  private
-
-    def marvel_client
-      @client ||= begin
-        mclient = Marvel::Client.new
-
-        mclient.configure do |config|
-          config.api_key = Settings.marvel.public_key
-          config.private_key = Settings.marvel.private_key
-        end
-
-        mclient
-      end
+    respond_to do |format|
+      format.html {}
+      format.json { render json: @comics }
     end
+  end
 end
