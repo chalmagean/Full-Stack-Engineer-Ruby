@@ -1,6 +1,7 @@
 class ComicsController < ApplicationController
   def index
     @comics = marvel_client.comics
+    @votes = Vote.all.map(&:comic_id)
   end
 
   private

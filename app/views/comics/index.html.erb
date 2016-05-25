@@ -2,7 +2,7 @@
   <div class="row">
     <% group.each do |comic| %>
       <div class="comic-wrapper col-md-3">
-        <%= comic_box(comic) %>
+        <%= comic_box(comic, @votes) %>
       </div>
     <% end %>
   </div>
