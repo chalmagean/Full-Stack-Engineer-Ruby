@@ -22,7 +22,8 @@ RSpec.describe MarvelClient do
   describe 'pagination' do
     it 'passes in the current page' do
       # 20 per page * current page number (2) => 40
-      expect(mc).to receive(:comics).with(offset: 40)
+      expect(mc).to receive(:comics).
+        with(offset: 40, orderBy: 'modified')
       MarvelClient.comics(page: "2")
     end
   end

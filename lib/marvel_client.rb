@@ -3,9 +3,14 @@ class MarvelClient
 
   def self.comics(params)
     if character_id = self.find_character(params)
-      marvel_client.character_comics(character_id, offset: offset(params))
+      marvel_client.
+        character_comics(
+          character_id,
+          offset: offset(params),
+          orderBy: 'modified'
+        )
     else
-      marvel_client.comics(offset: offset(params))
+      marvel_client.comics(offset: offset(params), orderBy: 'modified')
     end
   end
 
