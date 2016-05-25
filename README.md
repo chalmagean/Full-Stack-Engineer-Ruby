@@ -37,3 +37,14 @@
 
 - Deliverables
     - The forked version of this repo.
+
+## Preview
+
+Initial listing
+
+![Index](index.png)
+
+Search Results
+
+![Search results](search_results.png)
+
