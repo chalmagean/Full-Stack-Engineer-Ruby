@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Streetbees</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title>Streetbees</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row search-row">
+        <div class="col-md-12 text-right">
+          <%= form_tag root_path, class: 'form-inline', id: 'search-form', method: :get do %>
+            <div class="input-group">
+              <%= text_field_tag 'query', '', class: 'form-control', id: 'search', placeholder: 'ex. Deadpool' %>
+              <span class="input-group-btn">
+                <%= submit_tag 'Search', class: 'btn btn-default', id: 'search-submit' %>
+              </span>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

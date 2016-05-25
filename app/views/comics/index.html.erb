@@ -7,3 +7,9 @@
     <% end %>
   </div>
 <% end %>
+
+<div class="row">
+  <div class="col-md-12 text-right pagination">
+    <%= link_to "Next", { page: params[:page].to_i + 1, query: params[:query] }, class: 'btn btn-default' %>
+  </div>
+</div>
